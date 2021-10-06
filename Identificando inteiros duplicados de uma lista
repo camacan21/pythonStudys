@@ -1,0 +1,21 @@
+lista_de_listas_de_inteiros = [
+    [1,2,3,4,5,6,7,8,9,10],
+    [9,7,8,8,7,4,4,1,2,3],
+    [10,5,2,4,7,8,6,5,3,2],
+    [6,5,4,7,8,5,4,1,10,3]
+]
+
+def func(lista_de_listas):
+    numeros_checados = set()
+    primeiro_duplicado = -1
+
+    for numero in lista_de_listas:
+        if numero in numeros_checados:
+            primeiro_duplicado = numero
+            break
+        numeros_checados.add(numero)
+    return primeiro_duplicado
+
+for lista_de_listas in lista_de_listas_de_inteiros:
+    print(func(lista_de_listas))
+
